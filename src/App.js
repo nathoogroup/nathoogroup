@@ -41,7 +41,7 @@ function Slideshow() {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 1000,
+    autoplaySpeed: 7500,
     fade: true,
     arrows: false,
   };
