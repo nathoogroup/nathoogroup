@@ -8,6 +8,7 @@ import DescriptionIcon from '@mui/icons-material/Description'; // For CV
 import SchoolIcon from '@mui/icons-material/School';
 import MenuIcon from '@mui/icons-material/Menu';
 import group from './nathoo.jpeg'
+import logo from './logo.png'
 //import profilepic from './nathoo.jpg'
 import { gsap } from 'gsap';
 import Slider from 'react-slick';
@@ -84,7 +85,7 @@ function Slideshow() {
                 position: 'absolute',
                 top: '50%',
                 left: '50%',
-                transform: 'translate(-50%, 50%)',
+                transform: 'translate(-50%, 0%)',
                 fontFamily: 'Montserrat, sans-serif',
                 fontWeight: 400,
                 letterSpacing: '0.5px',
@@ -286,12 +287,12 @@ function Header() {
 
   return (
     <>
-      <AppBar position="static" sx={{ backgroundColor: '#2a3e4c', boxShadow: 'none' }}>
+      <AppBar position="static" sx={{ backgroundColor: '#000000', boxShadow: 'none' }}>
         <Toolbar>
           {/* Logo and Title */}
           <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
             <img
-              src="https://via.placeholder.com/50" // Replace with actual logo URL
+              src= {logo} // Replace with actual logo URL
               alt="Lab Logo"
               style={{ width: 40, height: 40, marginRight: '10px' }}
             />
@@ -342,7 +343,7 @@ function Header() {
 
 function Footer() {
   return (
-    <Box sx={{ backgroundColor: '#333', color: '#fff', padding: '2rem 0', marginTop: 'auto' }}>
+    <Box sx={{ backgroundColor: '#000000', color: '#fff', padding: '2rem 0', marginTop: 'auto' }}>
       <Container>
         <Typography variant="body1" align="center" sx={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 400 }}>
           Department of Mathematics and Statistics, University of Victoria
