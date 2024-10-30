@@ -126,7 +126,7 @@ function PISection() {
         </Grid>
         <Grid item xs={12} md={6}>
           <Typography variant="h6" sx={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 600 }}>
-Farouk Nathoo, PhD          </Typography>
+Dr. Farouk Nathoo, PhD          </Typography>
           <Typography variant="body1" sx={{ fontFamily: 'Montserrat, sans-serif', color: '#555', lineHeight: 1.6, marginBottom: '1rem' }}>
           Dr. Nathoo is a Canada Research Chair in Biostatistics and Professor in the Department of Mathematics and Statistics at the University of Victoria. His research interests are in Biostatistics, statistical methods for the analysis of neuroimaging data, Bayesian methods, variational Bayes, spatial and spatiotemporal data, statistical modeling and computational methods, cancer bioinformatics.
 

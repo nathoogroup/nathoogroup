@@ -7,9 +7,11 @@ import EmailIcon from '@mui/icons-material/Email';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import DescriptionIcon from '@mui/icons-material/Description'; // For CV
 
+import zw from "./zw.png"
+import ys from './ys.png'
 const teamMembers = [
   {
-    name: "Dr. John Doe",
+    name: "Dr. Farouk Nathoo",
     title: "Principal Investigator",
     researchInterest: "Leads the lab with a focus on Bayesian statistics, neuroimaging data, and computational methods.",
     image: "https://via.placeholder.com/100",
@@ -19,22 +21,32 @@ const teamMembers = [
     cv: "https://example.com/john-cv.pdf"
   },
   {
-    name: "Dr. Jane Doe",
-    title: "Postdoctoral Researcher",
-    researchInterest: "Explores Bayesian methods in neuroimaging, focusing on spatial and spatiotemporal modeling.",
-    image: "https://via.placeholder.com/100",
-    education: "PhD in Statistics, University of Toronto",
+    name: "Yasaman Shahhosseini",
+    title: "PhD Candidate",
+    researchInterest: "My research focuses on developing Bayesian models to analyze neuroimaging data, particularly fMRI, to study brain connectivity patterns and activation maps. In my primary work, I use Bayesian spatial modeling with SPDE priors and Hamiltonian Monte Carlo (HMC) to estimate brain activation patterns across voxels, capturing both spatial and temporal dependencies. In another project, I modeled fMRI signals using long-memory processes, revealing brain temporal complexities through Bayesian spatiotemporal modeling. Additionally, I worked on machine learning projects involving deforestation detection using Sentinel-2 satellite images, where I focused on optimizing precision in detecting deforested areas, handling imbalance data, and improving overall model performance.",
+    image: ys,
+    education: "MSc in Statistics, Sharif University of Technology",
     email: "jane.doe@example.com",
     twitter: "https://twitter.com/janedoe",
     cv: "https://example.com/jane-cv.pdf"
   },
   {
-    name: "John Smith",
-    title: "PhD Candidate",
-    researchInterest: "Focuses on statistical methods for cancer bioinformatics, integrating Bayesian approaches.",
-    image: "https://via.placeholder.com/100",
+    name: "Zhengxiao Wei",
+    title: "Research Associate",
+    researchInterest: "Zhengxiao Wei is a research associate with a strong focus on Bayesian methods, Markov chain Monte Carlo, and statistical modeling. His current work centers on Bayesian estimation techniques for within-subject designs, aiming to enhance methods for capturing individual variability and improving inference in repeated-measures studies. Looking ahead, Zhengxiao plans to delve into modeling spatial correlations within spatial transcriptomics data, further expanding his expertise in statistical analysis.",
+    image: zw,
     education: "MSc in Biostatistics, Harvard University",
     email: "john.smith@example.com",
+    twitter: "https://twitter.com/johnsmith",
+    cv: "https://example.com/john-cv.pdf"
+  },
+  {
+    name: "Kelly Lemaire",
+    title: "Undergraduate Researcher",
+    researchInterest: "I am a fourth-year undergraduate Data Science student at the University of Victoria. Initially, I started my undergraduate studies in Computer Science, but recently discovers a passion for statistics and decided to make the switch. For the next couple of terms, I will be a part of the team working with the professor on a research project after being awarded the JCURA scholarship. Our research will focus on how immune biomarkers in ovarian cancer tumour samples interact and whether patient survival is related to any of these biomarkers or their interactions. I am really excited to get hands-on experience doing research and see what hypotheses we develop and test over the course of this project.",
+    image: "https://via.placeholder.com/100",
+    education: "BSc Student in Data Science, University of Victoria",
+    email: "kellythlemaire@uvic.ca",
     twitter: "https://twitter.com/johnsmith",
     cv: "https://example.com/john-cv.pdf"
   }
