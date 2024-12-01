@@ -37,6 +37,13 @@ const teamMembers = [
     education: "MSc in Statistics, Sharif University of Technology",
   },
   {
+    name: "Aijun Yang",
+    title: "PhD Candidate",
+    researchInterest: "Coming soon..",
+    image: up,
+    education: "MSc in Mathematics & Statistics, University of Victoria",
+  },
+  {
     name: "Shibai Zhang",
     title: "PhD Candidate",
     researchInterest: "I am a fourth-year undergraduate Data Science student at the University of Victoria. Initially, I started my undergraduate studies in Computer Science, but recently discovers a passion for statistics and decided to make the switch. For the next couple of terms, I will be a part of the team working with the professor on a research project after being awarded the JCURA scholarship. Our research will focus on how immune biomarkers in ovarian cancer tumour samples interact and whether patient survival is related to any of these biomarkers or their interactions. I am really excited to get hands-on experience doing research and see what hypotheses we develop and test over the course of this project.",
