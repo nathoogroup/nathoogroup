@@ -3,102 +3,96 @@ import React, { useEffect, useRef, useState} from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import { AppBar, Toolbar, IconButton, Stack, Typography, Grid, Avatar,  Button, Box, Container, Divider,Drawer, List, ListItem, ListItemButton, ListItemText } from '@mui/material';
 import { Link as ExternalLink } from '@mui/material';
-import TwitterIcon from '@mui/icons-material/Twitter';
+//import TwitterIcon from '@mui/icons-material/Twitter';
 import DescriptionIcon from '@mui/icons-material/Description'; // For CV
-import SchoolIcon from '@mui/icons-material/School';
+//import SchoolIcon from '@mui/icons-material/School';
 import MenuIcon from '@mui/icons-material/Menu';
-import group from './nathoo.jpeg'
+//import group from './nathoo.jpeg'
 import logo from './logo.png'
+import up from './up.jpg'
 //import profilepic from './nathoo.jpg'
 import { gsap } from 'gsap';
-import Slider from 'react-slick';
+//import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import BioGallery from './Biogallery';
-
-function Slideshow() {
-  const slides = [
-    { 
-      image: group, 
-      title: 'Welcome', 
-      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-    },
-    { 
-      image: 'https://via.placeholder.com/1200x600', 
-      title: 'Projects', 
-      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-    },
-    { 
-      image: 'https://via.placeholder.com/1200x600', 
-      title: 'Recognitions', 
-      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-    },
-  ];
-
-  const settings = {
+import ResearchGrantsPage from './ResearchGrantsPage';
+import SoftwarePage from './SoftwarePage';
+import Pubpage from './Pubpage'
+import bayes from './bayes.png'
+import high from './high.jpg'
+import spat from './spat.jpg'
+const Slideshow = () => {
+/*   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 7500,
-    fade: true,
-    arrows: false,
+    arrows: true,
+    autoplay: false, // Slider autoplay is optional
   };
 
-
+  const slides = [
+    { type: "image", src: "https://via.placeholder.com/800x450", alt: "Sample Image 1" },
+    { type: "video", src: "dQw4w9WgXcQ", title: "YouTube Video 1" }, // Only provide the YouTube video ID
+    { type: "image", src: "https://via.placeholder.com/800x450?text=Image+2", alt: "Sample Image 2" },
+    { type: "video", src: "L_jWHffIx5E", title: "YouTube Video 2" },
+  ];
+ */
   return (
-    <Box sx={{ marginBottom: '3rem', overflow: 'hidden' }}>
+<iframe width="100%" height="800px" src="https://www.youtube.com/embed/FqXnwRdOop4?si=VD3AlDYcRuSluEPt&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen aut></iframe>
+/*     <div
+    style={{
+      width: "100vw", // Full width of the viewport
+      height: "80vh", // Occupy 80% of the viewport height
+      overflow: "hidden", // Prevent content overflow
+    }}
+  >
       <Slider {...settings}>
         {slides.map((slide, index) => (
-          <Box
+          <div
             key={index}
-            sx={{
-              position: 'relative',
-              textAlign: 'center',
-              color: '#fff',
-              height: '800px',
-              backgroundImage: `url(${slide.image})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              filter: 'brightness(0.6)',
+            style={{
+              position: "relative",
+              backgroundColor: "#000", // Fallback color for loading
             }}
           >
-            <Typography
-              variant="h4"
-              sx={{
-                position: 'absolute',
-                top: '40%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
-                fontFamily: 'Montserrat, sans-serif',
-                fontWeight: 600,
-                letterSpacing: '1px',
-              }}
-            >
-              {slide.title}
-            </Typography>
-            <Typography
-              variant="subtitle1"
-              sx={{
-                position: 'absolute',
-                top: '50%',
-                left: '50%',
-                transform: 'translate(-50%, 0%)',
-                fontFamily: 'Montserrat, sans-serif',
-                fontWeight: 400,
-                letterSpacing: '0.5px',
-              }}
-            >
-              {slide.subtitle}
-            </Typography>
-          </Box>
+            {slide.type === "image" ? (
+              <img
+                src={slide.src}
+                alt={slide.alt || `Slide ${index}`}
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                }}
+              />
+            ) : (
+              <iframe
+                src={`https://www.youtube.com/embed/${slide.src}?autoplay=1`}
+                title={slide.title || `Video ${index}`}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  border: "none",
+                }}
+              ></iframe>
+            )}
+          </div>
         ))}
       </Slider>
-    </Box>
+    </div> */
   );
-}
+};
 
 function PISection() {
   const piRef = useRef();
@@ -119,31 +113,20 @@ function PISection() {
       <Grid container spacing={4} alignItems="center" justifyContent="center">
         <Grid item xs={12} md={4} textAlign="center">
           <Avatar
-            src= "https://via.placeholder.com/150"
+            src= {up}
             alt="PI Image"
             sx={{ width: 400, height: 400, margin: 'auto', borderRadius: '50%' }}
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <Typography variant="h6" sx={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 600 }}>
-Dr. Farouk Nathoo, PhD          </Typography>
+Dr.Farouk Nathoo, PhD          </Typography>
           <Typography variant="body1" sx={{ fontFamily: 'Montserrat, sans-serif', color: '#555', lineHeight: 1.6, marginBottom: '1rem' }}>
           Dr. Nathoo is a Canada Research Chair in Biostatistics and Professor in the Department of Mathematics and Statistics at the University of Victoria. His research interests are in Biostatistics, statistical methods for the analysis of neuroimaging data, Bayesian methods, variational Bayes, spatial and spatiotemporal data, statistical modeling and computational methods, cancer bioinformatics.
 
           </Typography>
           {/* Links Section */}
           <Stack direction="row" spacing={2} justifyContent="center">
-            <Button
-              variant="contained"
-              startIcon={<SchoolIcon />}
-              component={ExternalLink}
-              href="https://www.uvic.ca" // Replace with actual UVic link
-              target="_blank"
-              rel="noopener"
-              sx={{ backgroundColor: '#2a3e4c', color: '#fff' }}
-            >
-              UVic Website
-            </Button>
             <Button
               variant="contained"
               startIcon={<DescriptionIcon />}
@@ -154,17 +137,6 @@ Dr. Farouk Nathoo, PhD          </Typography>
               sx={{ backgroundColor: '#2a3e4c', color: '#fff' }}
             >
               CV
-            </Button>
-            <Button
-              variant="contained"
-              startIcon={<TwitterIcon />}
-              component={ExternalLink}
-              href="https://twitter.com/username" // Replace with actual Twitter link
-              target="_blank"
-              rel="noopener"
-              sx={{ backgroundColor: '#1DA1F2', color: '#fff' }}
-            >
-              Twitter
             </Button>
           </Stack>
         </Grid>
@@ -178,17 +150,17 @@ function ResearchInterests() {
     { 
       title: 'Bayesian Statistics', 
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      image: 'https://via.placeholder.com/150x150.png?text=Neural+Connectivity'
+      image: bayes
     },
     { 
       title: 'Biostatistics', 
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      image: 'https://via.placeholder.com/150x150.png?text=Brain+Plasticity'
+      image: spat
     },
     { 
       title: 'High Dimensional Statistics', 
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      image: 'https://via.placeholder.com/150x150.png?text=Neuroimaging+Techniques'
+      image: high
     },
   ];
 
@@ -219,8 +191,8 @@ function ResearchInterests() {
                 src={interest.image}
                 alt={interest.title}
                 sx={{
-                  width: '100px',
-                  height: '100px',
+                  width: '350px',
+                  height: '350px',
                   objectFit: 'contain',
                   marginBottom: '1rem',
                   opacity: 0.8,
@@ -375,13 +347,18 @@ function LandingPage() {
                 </>
               } 
             />
-
             {/* Other Pages */}
-            <Route path="/research" />
-            <Route path="/publications" />
-            <Route path="/software"  />
+            <Route path="/research" element = {<ResearchGrantsPage/>}/>
+            <Route path="/publications" element = {<Pubpage/>} />
+            <Route path="/software" element = {<SoftwarePage/>}  />
             <Route path="/team" element = {<BioGallery/>}/>
-            <Route path="/join-us" />
+            <Route path="/join-us" 
+            element = {
+              <div align="center">
+            <iframe title = "Nathoo Group Interest" src="https://docs.google.com/forms/d/e/1FAIpQLSdaM2KjS6VAJP9E3F6ppZmY8XKzDbttZTynZkGBj7JXDDC6-Q/viewform?embedded=true" width="80%" height="591" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
+            }
+            />
           </Routes>
         </Box>
         <Footer />
