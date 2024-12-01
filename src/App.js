@@ -268,9 +268,11 @@ function Header() {
               alt="Lab Logo"
               style={{ width: 40, height: 40, marginRight: '10px' }}
             />
-            <Typography variant="h6" sx={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 700 }}>
-              Nathoo Group
-            </Typography>
+    <Typography variant="h6" sx={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 700 }}>
+      <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+        Nathoo Group
+      </Link>
+    </Typography>
           </Box>
 
           {/* Desktop Navigation */}
