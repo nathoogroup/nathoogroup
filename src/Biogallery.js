@@ -72,7 +72,7 @@ My current research project focuses on developing a new method to accurately pai
   {
     name: "Puneet Velidi",
     title: "MSc Student",
-    researchInterest: `I am an MSc Statistics Student at University of Victoria co-supervised by Prof. Farouk Nathoo and Prof. Michelle Miranda. My research focuses on statistical robustness, Bayesian methods, and software in neuroimaging analysis to address known problems in fMRI preprocessing, study replicability, and inference.`,
+    researchInterest: `Puneet is an MSc student at the University of Victoria (co-supervised by Prof. Nathoo and Prof. Miranda) interested in making the statistics behind neuroimaging analysis more rigorous by using Bayesian methods to quantify uncertainty and help inform research direction. He previously worked as a Postbac Intern at Harvard Medical School/Mass General Hospital and as a Software Engineer at Walmart Global Tech. He graduated from Cornell University in 2022 with a degree in Statistics & Economics.`,
     image: pv,
     education: "BA in Statistics and Economics, Cornell University",
     email: "pvelidi@uvic.ca",
