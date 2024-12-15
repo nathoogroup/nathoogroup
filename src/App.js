@@ -390,7 +390,7 @@ function LandingPage() {
             <Route path="/join-us" 
             element = {
               <div align="center">
-            <iframe title = "Nathoo Group Interest" src="https://docs.google.com/forms/d/e/1FAIpQLSdaM2KjS6VAJP9E3F6ppZmY8XKzDbttZTynZkGBj7JXDDC6-Q/viewform?embedded=true" width="80%" height="591" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+<iframe title = "nathoogroupinterest" src="https://docs.google.com/forms/d/e/1FAIpQLSdaM2KjS6VAJP9E3F6ppZmY8XKzDbttZTynZkGBj7JXDDC6-Q/viewform?embedded=true" width="640" height="718" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
             </div>
             }
             />

@@ -24,7 +24,7 @@ const teamMembers = [
     title: "Principal Investigator",
     researchInterest: "Leads the lab with broad interests in biostatistics, Bayesian methods and spatial data with application to neurodegenerative disorders and ovarian cancer.",
     image: fn,
-    education: "PhD in Statistics, Simon Fraser University",
+    education: "PhD (Simon Fraser), MMath (Waterloo), BSc (UBC)",
     email: "john.doe@example.com",
   },
   {

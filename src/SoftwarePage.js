@@ -66,6 +66,11 @@ const RepoSummary = ({ username, repository }) => {
 const SoftwarePage = () => {
   const repositories = [
     { username: "zhengxiaoUVic", repository: "rmBayes" },
+    { username: "Aijunyan", repository: "POI-SIMEX" },
+    { username: "v2south", repository: "PottsMix" },
+    { username: "cran", repository: "bgsmtr" },
+
+
   ];
 
   return (

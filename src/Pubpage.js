@@ -176,7 +176,7 @@ const Pubpage = () => {
                 if (result) {
                     results.push(result);
                 }
-                await new Promise(resolve => setTimeout(resolve, 100));
+                await new Promise(resolve => setTimeout(resolve, 10));
             }
 
             const paperData = results
