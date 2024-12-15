@@ -144,55 +144,55 @@ const Pubpage = () => {
     // Generate array of years from 2024 to 2000
     const availableYears = Array.from({ length: 25 }, (_, i) => 2024 - i);
 
-    const fetchDOI = async (doi) => {
-        try {
-            // First check if DOI exists in Crossref registry
-            const agencyResponse = await fetch(`https://api.crossref.org/works/${doi}/agency`);
-            if (!agencyResponse.ok) {
-                console.warn(`DOI not found in Crossref registry: ${doi}`);
-                return null;
-            }
-
-            // If DOI exists, fetch the full details
-            const response = await fetch(`https://api.crossref.org/works/${doi}`);
-            if (!response.ok) {
-                console.warn(`Could not fetch DOI details: ${doi}`);
-                return null;
-            }
-            return await response.json();
-        } catch (error) {
-            console.error(`Error fetching DOI: ${doi}`, error);
-            return null;
-        }
-    };
-
-    const fetchDOIsSequentially = async () => {
-        setLoading(true);
-        const results = [];
-        
-        for (const doi of dois) {
-            const result = await fetchDOI(doi);
-            if (result) {
-                results.push(result);
-            }
-            await new Promise(resolve => setTimeout(resolve, 100));
-        }
-
-        const paperData = results
-            .map(result => result.message)
-            .filter(Boolean)
-            .filter(paper => {
-                const dateParts = 
-                    paper["published-print"]?.["date-parts"]?.[0] ||
-                    paper["published-online"]?.["date-parts"]?.[0];
-                const year = dateParts ? dateParts[0].toString() : null;
-                return selectedYear === "All" || year === selectedYear;
-            });
-        setPapers(paperData);
-        setLoading(false);
-    };
-
     useEffect(() => {
+        const fetchDOI = async (doi) => {
+            try {
+                // First check if DOI exists in Crossref registry
+                const agencyResponse = await fetch(`https://api.crossref.org/works/${doi}/agency`);
+                if (!agencyResponse.ok) {
+                    console.warn(`DOI not found in Crossref registry: ${doi}`);
+                    return null;
+                }
+
+                // If DOI exists, fetch the full details
+                const response = await fetch(`https://api.crossref.org/works/${doi}`);
+                if (!response.ok) {
+                    console.warn(`Could not fetch DOI details: ${doi}`);
+                    return null;
+                }
+                return await response.json();
+            } catch (error) {
+                console.error(`Error fetching DOI: ${doi}`, error);
+                return null;
+            }
+        };
+
+        const fetchDOIsSequentially = async () => {
+            setLoading(true);
+            const results = [];
+            
+            for (const doi of dois) {
+                const result = await fetchDOI(doi);
+                if (result) {
+                    results.push(result);
+                }
+                await new Promise(resolve => setTimeout(resolve, 100));
+            }
+
+            const paperData = results
+                .map(result => result.message)
+                .filter(Boolean)
+                .filter(paper => {
+                    const dateParts = 
+                        paper["published-print"]?.["date-parts"]?.[0] ||
+                        paper["published-online"]?.["date-parts"]?.[0];
+                    const year = dateParts ? dateParts[0].toString() : null;
+                    return year === selectedYear;
+                });
+            setPapers(paperData);
+            setLoading(false);
+        };
+
         fetchDOIsSequentially();
         // eslint-disable-next-line
     }, [selectedYear]);
@@ -223,7 +223,6 @@ const Pubpage = () => {
                     onChange={handleYearChange}
                     label="Filter by Year"
                 >
-                    <MenuItem value="All">All</MenuItem>
                     {availableYears.map((year) => (
                         <MenuItem key={year} value={year.toString()}>
                             {year}
