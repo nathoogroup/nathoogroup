@@ -413,7 +413,7 @@ function BioGallery() {
               {alum.name}
             </Typography>
             <Typography variant="body2" sx={{ fontFamily: 'Roboto, sans-serif', fontStyle: 'italic', color: '#555' }}>
-            Research Topic:{alum.rt}
+            Research Topic: {alum.rt}
             </Typography>
             <Typography variant="body2" sx={{ fontFamily: 'Roboto, sans-serif', color: '#555' }}>
             Position: {alum.currentPosition}
