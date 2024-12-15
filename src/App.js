@@ -9,90 +9,61 @@ import DescriptionIcon from '@mui/icons-material/Description'; // For CV
 import MenuIcon from '@mui/icons-material/Menu';
 //import group from './nathoo.jpeg'
 import logo from './logo.png'
-import up from './up.jpg'
-//import profilepic from './nathoo.jpg'
+//import up from './up.jpg'
+import spat from './spat.png'
+import fn from './nathoo.jpg'
 import { gsap } from 'gsap';
-//import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import BioGallery from './Biogallery';
-import ResearchGrantsPage from './ResearchGrantsPage';
 import SoftwarePage from './SoftwarePage';
+import nathoo from './nathoo.jpeg'
 import Pubpage from './Pubpage'
 import bayes from './bayes.png'
 import high from './high.jpg'
-import spat from './spat.jpg'
-const Slideshow = () => {
-/*   const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true,
-    autoplay: false, // Slider autoplay is optional
-  };
+//import spat from './spat.jpg'
+import nserc from './NSERC_RGB.svg'
+import math from './math.png'
+import cihr from './cihr.jpg'
+import uvic from './uvic.jpg'
+import tfri from './tfri.png'
+import biostat from './spat.jpg'
+import 'swiper/css';
+import 'swiper/css/pagination';
 
-  const slides = [
-    { type: "image", src: "https://via.placeholder.com/800x450", alt: "Sample Image 1" },
-    { type: "video", src: "dQw4w9WgXcQ", title: "YouTube Video 1" }, // Only provide the YouTube video ID
-    { type: "image", src: "https://via.placeholder.com/800x450?text=Image+2", alt: "Sample Image 2" },
-    { type: "video", src: "L_jWHffIx5E", title: "YouTube Video 2" },
-  ];
- */
+// import required modules
+
+import { Link as ScrollLink } from 'react-scroll';
+
+function Slideshow() {
   return (
-<iframe width="100%" height="800px" src="https://www.youtube.com/embed/FqXnwRdOop4?si=VD3AlDYcRuSluEPt&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen aut></iframe>
-/*     <div
-    style={{
-      width: "100vw", // Full width of the viewport
-      height: "80vh", // Occupy 80% of the viewport height
-      overflow: "hidden", // Prevent content overflow
-    }}
-  >
-      <Slider {...settings}>
-        {slides.map((slide, index) => (
-          <div
-            key={index}
-            style={{
-              position: "relative",
-              backgroundColor: "#000", // Fallback color for loading
-            }}
-          >
-            {slide.type === "image" ? (
-              <img
-                src={slide.src}
-                alt={slide.alt || `Slide ${index}`}
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                }}
-              />
-            ) : (
-              <iframe
-                src={`https://www.youtube.com/embed/${slide.src}?autoplay=1`}
-                title={slide.title || `Video ${index}`}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  width: "100%",
-                  height: "100%",
-                  border: "none",
-                }}
-              ></iframe>
-            )}
-          </div>
-        ))}
-      </Slider>
-    </div> */
+    <div
+      style={{
+        width: '100vw',
+        height: '80vh',
+        overflowX: 'scroll',
+        whiteSpace: 'nowrap',
+        display: 'flex',
+        alignItems: 'center',
+        overflowY: 'hidden', // Disable vertical scrolling
+      }}
+    >
+      <ScrollLink to="scrollable" smooth>
+        <img
+          id="scrollable"
+          src={nathoo}
+          alt="Scrollable"
+          style={{
+            display: 'block',
+            width: '3000px',
+            height: 'auto',
+          }}
+        />
+      </ScrollLink>
+    </div>
   );
-};
+}
+
 
 function PISection() {
   const piRef = useRef();
@@ -107,31 +78,31 @@ function PISection() {
 
   return (
     <Box sx={{ marginBottom: '3rem', padding: '2rem 0', backgroundColor: '#f7f7f7' }}>
-      <Typography variant="h5" gutterBottom align="center" sx={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 700 }}>
+      <Typography variant="h5" gutterBottom align="center" sx={{ fontFamily: 'Roboto, sans-serif', fontWeight: 700 }}>
         Meet Our Principal Investigator
       </Typography>
       <Grid container spacing={4} alignItems="center" justifyContent="center">
-        <Grid item xs={12} md={4} textAlign="center">
+        <Grid item xs={12} md={4} textAlign="center" sx={{ marginBottom: '3rem' }}>
           <Avatar
-            src= {up}
+            src= {fn}
             alt="PI Image"
             sx={{ width: 400, height: 400, margin: 'auto', borderRadius: '50%' }}
           />
         </Grid>
         <Grid item xs={12} md={6}>
-          <Typography variant="h6" sx={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 600 }}>
+          <Typography variant="h6" sx={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
 Dr.Farouk Nathoo, PhD          </Typography>
-          <Typography variant="body1" sx={{ fontFamily: 'Montserrat, sans-serif', color: '#555', lineHeight: 1.6, marginBottom: '1rem' }}>
-          Dr. Nathoo is a Canada Research Chair in Biostatistics and Professor in the Department of Mathematics and Statistics at the University of Victoria. His research interests are in Biostatistics, statistical methods for the analysis of neuroimaging data, Bayesian methods, variational Bayes, spatial and spatiotemporal data, statistical modeling and computational methods, cancer bioinformatics.
-
+          <Typography variant="body1" sx={{ fontFamily: 'Roboto, sans-serif', color: '#555', lineHeight: 1.6, marginBottom: '1rem' }}>
+          Dr. Nathoo is a Professor (Canada Research Chair Tier 2, 2013 - 2023) in the Department of Mathematics and Statistics at the University of Victoria. His research interests have emphasis on biostatistics and Bayesian methods broadly with specific emphasis on the analysis of spatial, temporal and spatiotemporal data. His teaching interests have emphasis on interdisciplinary training of graduate students, Bayesian statistics and data analysis.
           </Typography>
+          
           {/* Links Section */}
           <Stack direction="row" spacing={2} justifyContent="center">
             <Button
               variant="contained"
               startIcon={<DescriptionIcon />}
               component={ExternalLink}
-              href="https://example.com/cv" // Replace with actual CV link
+              href="https://web.uvic.ca/~nathoo/nathoo_CV_TD.pdf" // Replace with actual CV link
               target="_blank"
               rel="noopener"
               sx={{ backgroundColor: '#2a3e4c', color: '#fff' }}
@@ -139,28 +110,83 @@ Dr.Farouk Nathoo, PhD          </Typography>
               CV
             </Button>
           </Stack>
+
         </Grid>
+        <iframe width="60%" height="500px" src="https://www.youtube.com/embed/FqXnwRdOop4?si=VD3AlDYcRuSluEPt&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen aut></iframe>
+
       </Grid>
     </Box>
   );
 }
+const OrganizationLogos = () => {
+  const logos = [
+    { image: nserc, name: 'Organization 1' },
+    { image: cihr, name: 'Organization 2' },
+    { image: tfri, name: 'Organization 3' },
+    { image: uvic, name: 'Organization 4' },
+    { image: math, name: 'Organization 5' },
+  ];
+  return (
+    <Box sx={{ marginBottom: '3rem', padding: '2rem 0', backgroundColor: '#f7f7f7'}}>
+      <Grid container spacing={4} justifyContent="center">
+        {logos.map((logo, index) => (
+          <Grid item xs={6} sm={6} md={2} key={index}>
+            <Box
+              sx={{
+                textAlign: 'center',
+                padding: '1rem',
+              }}
+            >
+              <Box
+                component="img"
+                src={logo.image}
+                alt={logo.name}
+                sx={{
+                  width: '100%',
+                  maxWidth: '300px',
+                  height: 'auto',
+                  objectFit: 'contain',
+                  marginBottom: '1rem',
+                }}
+              />
+{/*               <Typography
+                variant="h6"
+                sx={{
+                  fontFamily: 'Roboto, sans-serif',
+                  fontWeight: 600,
+                }}
+              >
+                {logo.name}
+              </Typography> */}
+            </Box>
+          </Grid>
+        ))}
+      </Grid>
+    </Box>
+  );
+};
 
 function ResearchInterests() {
   const interests = [
     { 
       title: 'Bayesian Statistics', 
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      description: ' Integrating Prior Information; Hierarchical Modelling; Probabilistic Interpretations',
       image: bayes
     },
     { 
       title: 'Biostatistics', 
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      image: spat
+      description: 'Solving statistical problems, developing new modelling and computational methods and analyzing data motivated by biological and medical research towards advancing human health.',
+      image: biostat
     },
     { 
       title: 'High Dimensional Statistics', 
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      description: 'More unknown parameters than number of data points.',
       image: high
+    },
+    { 
+      title: 'Spatial Statistics', 
+      description: 'The analysis of data with a location attribute. These could be geographical areas (disease mapping; brain mapping), point locations (trees), random locations (cell locations on a tissue sample; animal movements).',
+      image: spat
     },
   ];
 
@@ -176,12 +202,21 @@ function ResearchInterests() {
 
   return (
     <Box sx={{ marginBottom: '3rem', padding: '2rem 0' }}>
-      <Typography variant="h5" gutterBottom align="center" sx={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 700 }}>
+      <Typography variant="h5" gutterBottom align="center" sx={{ fontFamily: 'Roboto, sans-serif', fontWeight: 700 }}>
         Our Research Interests
+      </Typography>
+      <Typography variant="h6" sx={{ 
+        fontFamily: 'Roboto, sans-serif', 
+        color: '#555', 
+        marginTop: '0.5rem', 
+        width: '80%',
+        margin: '0 auto'
+      }}>
+        Our group has primary interests in in biostatistics and Bayesian methods broadly with specific emphasis on the analysis of spatial, temporal  and spatiotemporal data, including neuroimaging data and spatial omics data. Application areas include neurodegenerative disorders (Alzheimer's disease, Attention-deficit/hyperactivity disorder) and cancer (ovarian cancer).
       </Typography>
       <Grid container spacing={4} justifyContent="center">
         {interests.map((interest, index) => (
-          <Grid item xs={12} md={4} key={index}>
+          <Grid item xs={12} md={6} key={index}>
             <Box
               ref={(el) => (interestRef.current[index] = el)}
               sx={{ textAlign: 'center', padding: '1rem' }}
@@ -198,10 +233,10 @@ function ResearchInterests() {
                   opacity: 0.8,
                 }}
               />
-              <Typography variant="h6" sx={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 600 }}>
+              <Typography variant="h6" sx={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
                 {interest.title}
               </Typography>
-              <Typography variant="body1" sx={{ fontFamily: 'Montserrat, sans-serif', color: '#555', marginTop: '0.5rem' }}>
+              <Typography variant="body1" sx={{ fontFamily: 'Roboto, sans-serif', color: '#555', marginTop: '0.5rem' }}>
                 {interest.description}
               </Typography>
             </Box>
@@ -226,11 +261,6 @@ function Header() {
         <ListItem disablePadding>
           <ListItemButton component={Link} to="/">
             <ListItemText primary="Home" />
-          </ListItemButton>
-        </ListItem>
-        <ListItem disablePadding>
-          <ListItemButton component={Link} to="/research">
-            <ListItemText primary="Research" />
           </ListItemButton>
         </ListItem>
         <ListItem disablePadding>
@@ -268,17 +298,15 @@ function Header() {
               alt="Lab Logo"
               style={{ width: 40, height: 40, marginRight: '10px' }}
             />
-    <Typography variant="h6" sx={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 700 }}>
-      <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-        Nathoo Group
+      <Link to="/" style={{ textDecoration: 'none', color: 'inherit', fontSize: 20, fontWeight: 700}}>
+        Nathoo
+        Group
       </Link>
-    </Typography>
           </Box>
 
           {/* Desktop Navigation */}
-          <Box sx={{ display: { xs: 'none', md: 'block' } }}>
+          <Box sx={{ display: { xs: 'none', md: 'block' }, fontWeight: 700 }}>
             <Button color="inherit" component={Link} to="/">Home</Button>
-            <Button color="inherit" component={Link} to="/research">Research</Button>
             <Button color="inherit" component={Link} to="/publications">Publications</Button>
             <Button color="inherit" component={Link} to="/software">Software</Button>
             <Button color="inherit" component={Link} to="/team">Team</Button>
@@ -319,11 +347,16 @@ function Footer() {
   return (
     <Box sx={{ backgroundColor: '#000000', color: '#fff', padding: '2rem 0', marginTop: 'auto' }}>
       <Container>
-        <Typography variant="body1" align="center" sx={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 400 }}>
+        <Typography variant="body1" align="center" sx={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
           Department of Mathematics and Statistics, University of Victoria
         </Typography>
-        <Typography variant="body2" align="center" sx={{ fontFamily: 'Montserrat, sans-serif', color: '#ccc' }}>
+        <Typography variant="body2" align="center" sx={{ fontFamily: 'Roboto, sans-serif', color: '#ccc' }}>
           David Turpin Building A418 | nathoo at uvic dot ca
+        </Typography>
+        <Typography variant="body2" align="center" sx={{ fontFamily: 'Roboto, sans-serif', color: '#ccc' }}>
+        
+        <ExternalLink href="https://www.uvic.ca/info-for/indigenous/index.php">         We acknowledge and respect the Lək̓ʷəŋən (Songhees and Esquimalt) Peoples on whose territory the university stands, and the Lək̓ʷəŋən and W̱SÁNEĆ Peoples whose historical relationships with the land continue to this day.
+        </ExternalLink>
         </Typography>
       </Container>
     </Box>
@@ -345,12 +378,12 @@ function LandingPage() {
                   <Slideshow />
                   <PISection />
                   <ResearchInterests />
+                  <OrganizationLogos/>
                   <Divider />
                 </>
               } 
             />
             {/* Other Pages */}
-            <Route path="/research" element = {<ResearchGrantsPage/>}/>
             <Route path="/publications" element = {<Pubpage/>} />
             <Route path="/software" element = {<SoftwarePage/>}  />
             <Route path="/team" element = {<BioGallery/>}/>

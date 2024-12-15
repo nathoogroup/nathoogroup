@@ -49,7 +49,7 @@ four years`,
 const ResearchGrantsPage = () => {
   return (
     
-    <Container maxWidth="lg" sx={{ mt: 6, mb: 6, fontFamily: 'Montserrat, sans-serif' }}>
+    <Container maxWidth="lg" sx={{ mt: 6, mb: 6, fontFamily: 'Roboto, sans-serif' }}>
       <Typography variant="h4" align="center" marginBottom='2rem' gutterBottom>
         Research Grants
       </Typography>

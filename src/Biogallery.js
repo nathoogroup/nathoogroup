@@ -4,21 +4,26 @@ import { Box, Typography, Grid, Avatar, Modal, Container, Card, CardContent, Ico
 import CloseIcon from '@mui/icons-material/Close';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import EmailIcon from '@mui/icons-material/Email';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import DescriptionIcon from '@mui/icons-material/Description'; // For CV
+//import TwitterIcon from '@mui/icons-material/Twitter';
+//import DescriptionIcon from '@mui/icons-material/Description'; // For CV
 
 import zw from "./zw.png"
 import ys from './ys.png'
-import up from './up.jpg'
+//import up from './up.jpg'
 import fl from './fl.JPG'
 import sz from './sz.jpg'
-import pv from './pv.png'
+import pv from './pv.jpg'
+import fn from './nathoo.jpg'
+import kl from './kl.png'
+import ay from './Aijun.png'
+import rp from './rp.jpg'
+import sk from './sk.jpg'
 const teamMembers = [
   {
     name: "Dr. Farouk Nathoo",
     title: "Principal Investigator",
-    researchInterest: "Leads the lab with a focus on Bayesian statistics, neuroimaging data, and computational methods.",
-    image: up,
+    researchInterest: "Leads the lab with broad interests in biostatistics, Bayesian methods and spatial data with application to neurodegenerative disorders and ovarian cancer.",
+    image: fn,
     education: "PhD in Statistics, Simon Fraser University",
     email: "john.doe@example.com",
   },
@@ -32,15 +37,16 @@ const teamMembers = [
   {
     name: "Yasaman Shahhosseini",
     title: "PhD Student",
-    researchInterest: "My research focuses on developing Bayesian models to analyze neuroimaging data, particularly fMRI, to study brain connectivity patterns and activation maps. In my primary work, I use Bayesian spatial modeling with SPDE priors and Hamiltonian Monte Carlo (HMC) to estimate brain activation patterns across voxels, capturing both spatial and temporal dependencies. In another project, I modeled fMRI signals using long-memory processes, revealing brain temporal complexities through Bayesian spatiotemporal modeling. Additionally, I worked on machine learning projects involving deforestation detection using Sentinel-2 satellite images, where I focused on optimizing precision in detecting deforested areas, handling imbalance data, and improving overall model performance.",
+    researchInterest: "My research focus is on developing Bayesian models to analyze neuroimaging data, particularly fMRI, to study brain connectivity patterns and activation maps. In my primary work, I use Bayesian spatial modeling with SPDE priors and Hamiltonian Monte Carlo (HMC) to estimate brain activation patterns across voxels, capturing both spatial and temporal dependencies. In another project, I modeled fMRI signals using long-memory processes, revealing brain temporal complexities through Bayesian spatiotemporal modeling. Additionally, I worked on machine learning projects involving deforestation detection using Sentinel-2 satellite images, where I focused on optimizing precision in detecting deforested areas, handling imbalance data, and improving overall model performance.",
     image: ys,
     education: "MSc in Statistics, Sharif University of Technology",
   },
   {
     name: "Aijun Yang",
     title: "PhD Student",
-    researchInterest: "Coming soon..",
-    image: up,
+    researchInterest: `Aijun Yang is a PhD candidate in Statistics at the University of Victoria supervised by Dr. Farouk Nathoo and Dr. Julian Lum. Her research focus is on developing innovative techniques for the analysis of tissue histology data including bias correction approaches for regression and methods for longitudinal point pattern analysis for tissue microarrays. Her application focus for her doctoral degree is ovarian cancer. She works on using advanced Bayesian methods, machine learning, and biostatistical techniques to solve complex, real-world problems.
+In addition to her academic work, Aijun is a senior economist with BC Public Services, where she applies her statistical expertise to interdisciplinary projects in chronic disease monitoring, hospital performance evaluation, health utilization analysis, and patient-centered measurement survey modeling. By bridging research with practical applications, Aijun aims to enhance healthcare insights and support evidence-based public policy initiatives.`,
+    image: ay,
     education: "MSc in Mathematics & Statistics, University of Victoria",
   },
   {
@@ -58,22 +64,26 @@ const teamMembers = [
 
 My current research project focuses on developing a new method to accurately pair immune receptor chains—specifically the light and heavy chains, as well as the alpha and beta chains in T and B cells. We aim to infer individual pairs using a statistical approach that combines gene expression matrices with spatial co-expression point patterns. This work has significant potential to enhance our understanding of immune responses within the tumor microenvironment, particularly in ovarian cancer.`,
     image: fl,
-    education: "MS in Applied Mathematics & Statistics, Johns Hopkins University",
+    education: "BA in Mathematics, University of British Columbia",
     email: "floraliu221@outlook.com",
   },
   {
     name: "Shreena Kalaria",
     title: "MSc Student",
-    researchInterest: `Coming soon ..`,
-    image: up,
+    researchInterest: `Shreena is an interdisciplinary Master’s student collaboratively working with the Nathoo and Nelson labs. Her thesis focuses on developing and applying novel bioinformatic tools, spatial statistics, and clustering methods to identify, classify, and investigate immune cell aggregates in ovarian cancer. She is grateful to have the opportunity to address complex problems in women's healthcare through this project. Additionally, she is working on a study analyzing statistical evidence measures and the reporting of significance in cancer research literature. Shreena aims to encourage academic and public engagement with data and evidence through improved statistical and information literacy. `,
+    image: sk,
     education: "BS in Biopharmaceutical Science, University of Ottawa",
   },
 
   {
     name: "Rishabh Pabbi",
     title: "MSc Student",
-    researchInterest: `Coming soon ..`,
-    image: up,
+    researchInterest: `Myself Rishabh Pabbi, a researcher passionate about employing statistical and machine learning methods to address challenges in healthcare and genomics. During my internship at Providence Health Care, I developed an advanced patient recovery tracking system to support clinicians in monitoring recovery journeys, showcasing my ability to design practical, data-driven solutions.
+
+I am about to commence research under the supervision of Dr. Farouk Nathoo, focusing on developing statistical machine learning models for integrated data analysis. My research will explore immune responses in ovarian cancer, leveraging tools such as spatial transcriptomics, single-cell sequencing, and whole genome sequencing. By applying spatial statistics and advanced computational approaches, I aim to uncover insights into tumor microenvironments and immune-tumor interactions.
+
+This work, at the intersection of statistics, machine learning, and oncology, seeks to advance our understanding of ovarian cancer biology and systemic immune responses, contributing to the development of precision immunotherapies and improved patient outcomes.`,
+    image: rp,
     education: "BS in Computer Science, University of Victoria",
   },
   {
@@ -88,13 +98,13 @@ My current research project focuses on developing a new method to accurately pai
     name: "Kelly Lemaire",
     title: "Undergraduate Researcher",
     researchInterest: "I am a fourth-year undergraduate Data Science student at the University of Victoria. Initially, I started my undergraduate studies in Computer Science, but recently discovers a passion for statistics and decided to make the switch. For the next couple of terms, I will be a part of the team working with the professor on a research project after being awarded the JCURA scholarship. Our research will focus on how immune biomarkers in ovarian cancer tumour samples interact and whether patient survival is related to any of these biomarkers or their interactions. I am really excited to get hands-on experience doing research and see what hypotheses we develop and test over the course of this project.",
-    image: up,
+    image: kl,
     education: "BSc Student in Data Science, University of Victoria",
     email: "kellythlemaire@uvic.ca",
   },
 
 ];
-const gradalumni = [
+const mastersalumni = [
   {
     name: "Hong Li",
     rt: 'Spatio-temporal modeling of fire frequency and severity from panel data',
@@ -169,6 +179,38 @@ MGARCH for financial modelling`,
 Nicholson Manufacturing
 Inc.`
   },
+  
+]
+
+const phdalumni = [
+  {
+    name: "Angus Argyle",
+    rt: 'Species Richness Estimation',
+    currentPosition: `Statistician, Statistics
+Canada, Ottawa`
+  },
+  {
+    name: "Ming Teng ",
+    rt: 'A study of desperation in sport.',
+    currentPosition: `Statistician, Morgan
+Stanley, New York`
+  },
+  {
+    name: "Yin Song",
+    rt: 'Mixed model and space-varying regression analysis of MEG brain signals.',
+    currentPosition: `TV Production
+Masters Candidate, Boston
+University, College of
+Communication`
+  },
+  {
+    name: "Eugene Opoku",
+    rt: 'Mixed model and space-varying regression analysis of MEG brain signals.',
+    currentPosition: `TV Production
+Masters Candidate, Boston
+University, College of
+Communication`
+  }
   
 ]
 
@@ -247,7 +289,7 @@ function BioGallery() {
   return (
     <Container sx={{ marginTop: '3rem', paddingBottom: '3rem' }}>
       {/* Team Members Section */}
-      <Typography variant="h3" sx={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 700, marginBottom: '2rem' }}>
+      <Typography variant="h3" sx={{ fontFamily: 'Roboto, sans-serif', fontWeight: 700, marginBottom: '2rem' }}>
         Our Team
       </Typography>
       <Grid container spacing={4}>
@@ -266,10 +308,10 @@ function BioGallery() {
             >
               <CardContent>
                 <Avatar src={member.image} alt={member.name} sx={{ width: 150, height: 150, margin: 'auto' }} />
-                <Typography variant="h6" sx={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 600, marginTop: '1rem' }}>
+                <Typography variant="h6" sx={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600, marginTop: '1rem' }}>
                   {member.name}
                 </Typography>
-                <Typography variant="body2" sx={{ fontFamily: 'Montserrat, sans-serif', color: '#777' }}>
+                <Typography variant="body2" sx={{ fontFamily: 'Roboto, sans-serif', color: '#777' }}>
                   {member.title}
                 </Typography>
                 <ExpandMoreIcon sx={{ color: '#2a3e4c', marginTop: '0.5rem' }} />
@@ -291,13 +333,13 @@ function BioGallery() {
           {selectedMember && (
             <>
               <Avatar src={selectedMember.image} alt={selectedMember.name} sx={{ width: 80, height: 80, margin: 'auto' }} />
-              <Typography variant="h6" sx={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 700, textAlign: 'center', marginTop: '1rem' }}>
+              <Typography variant="h6" sx={{ fontFamily: 'Roboto, sans-serif', fontWeight: 700, textAlign: 'center', marginTop: '1rem' }}>
                 {selectedMember.name}
               </Typography>
-              <Typography variant="body1" sx={{ fontFamily: 'Montserrat, sans-serif', color: '#555', textAlign: 'center', marginTop: '1rem' }}>
+              <Typography variant="body1" sx={{ fontFamily: 'Roboto, sans-serif', color: '#555', textAlign: 'left', marginTop: '1rem' }}>
                 {selectedMember.researchInterest}
               </Typography>
-              <Typography variant="body2" sx={{ fontFamily: 'Montserrat, sans-serif', color: '#777', textAlign: 'center', marginTop: '1rem' }}>
+              <Typography variant="body2" sx={{ fontFamily: 'Roboto, sans-serif', color: '#777', textAlign: 'center', marginTop: '1rem' }}>
                 <strong>Education:</strong> {selectedMember.education}
               </Typography>
               {/* Social Links */}
@@ -307,7 +349,7 @@ function BioGallery() {
                     <EmailIcon />
                   </IconButton>
                 </Link>
-                <Link href={selectedMember.twitter} target="_blank" rel="noopener">
+{/*                 <Link href={selectedMember.twitter} target="_blank" rel="noopener">
                   <IconButton>
                     <TwitterIcon />
                   </IconButton>
@@ -316,7 +358,7 @@ function BioGallery() {
                   <IconButton>
                     <DescriptionIcon />
                   </IconButton>
-                </Link>
+                </Link> */}
               </Stack>
             </>
           )}
@@ -325,38 +367,55 @@ function BioGallery() {
 
       {/* Alumni Section */}
       <Box sx={{ marginTop: '4rem' }}>
-        <Typography variant="h3" sx={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 700, marginBottom: '2rem' }}>
+        <Typography variant="h3" sx={{ fontFamily: 'Roboto, sans-serif', fontWeight: 700, marginBottom: '2rem' }}>
           Alumni & Last Known Positions
         </Typography>
-        <Typography variant="h4" sx={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 350,  marginBottom: '1rem' }}>
-          Graduate
+        <Typography variant="h4" sx={{ fontFamily: 'Roboto, sans-serif', fontWeight: 350,  marginBottom: '1rem' }}>
+          Doctoral
         </Typography>
-        {gradalumni.map((alum, index) => (
+        {phdalumni.map((alum, index) => (
           <Box key={index} sx={{ marginBottom: '1rem' }}>
-            <Typography variant="body1" sx={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 600 }}>
+            <Typography variant="body1" sx={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
               {alum.name}
             </Typography>
-            <Typography variant="body2" sx={{ fontFamily: 'Montserrat, sans-serif', fontStyle: 'italic', color: '#555' }}>
+            <Typography variant="body2" sx={{ fontFamily: 'Roboto, sans-serif', fontStyle: 'italic', color: '#555' }}>
               Research Topic: {alum.rt}
             </Typography>
-            <Typography variant="body2" sx={{ fontFamily: 'Montserrat, sans-serif', color: '#555' }}>
+            <Typography variant="body2" sx={{ fontFamily: 'Roboto, sans-serif', color: '#555' }}>
               Position: {alum.currentPosition}
             </Typography>
 
           </Box>
         ))}
-        <Typography variant="h4" sx={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 350, marginBottom: '1rem' }}>
-          Undergraduate
+        <Typography variant="h4" sx={{ fontFamily: 'Roboto, sans-serif', fontWeight: 350,  marginBottom: '1rem' }}>
+          Master's
+        </Typography>
+        {mastersalumni.map((alum, index) => (
+          <Box key={index} sx={{ marginBottom: '1rem' }}>
+            <Typography variant="body1" sx={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
+              {alum.name}
+            </Typography>
+            <Typography variant="body2" sx={{ fontFamily: 'Roboto, sans-serif', fontStyle: 'italic', color: '#555' }}>
+              Research Topic: {alum.rt}
+            </Typography>
+            <Typography variant="body2" sx={{ fontFamily: 'Roboto, sans-serif', color: '#555' }}>
+              Position: {alum.currentPosition}
+            </Typography>
+
+          </Box>
+        ))}
+        <Typography variant="h4" sx={{ fontFamily: 'Roboto, sans-serif', fontWeight: 350, marginBottom: '1rem' }}>
+          Undergraduate 
         </Typography>
         {undergradalumni.map((alum, index) => (
           <Box key={index} sx={{ marginBottom: '1rem' }}>
-            <Typography variant="body1" sx={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 600 }}>
+            <Typography variant="body1" sx={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
               {alum.name}
             </Typography>
-            <Typography variant="body2" sx={{ fontFamily: 'Montserrat, sans-serif', fontStyle: 'italic', color: '#555' }}>
+            <Typography variant="body2" sx={{ fontFamily: 'Roboto, sans-serif', fontStyle: 'italic', color: '#555' }}>
             Research Topic:{alum.rt}
             </Typography>
-            <Typography variant="body2" sx={{ fontFamily: 'Montserrat, sans-serif', color: '#555' }}>
+            <Typography variant="body2" sx={{ fontFamily: 'Roboto, sans-serif', color: '#555' }}>
             Position: {alum.currentPosition}
             </Typography>
 
