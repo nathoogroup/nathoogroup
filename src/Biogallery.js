@@ -376,7 +376,7 @@ function BioGallery() {
       {/* Alumni Section */}
       <Box sx={{ marginTop: '4rem' }}>
         <Typography variant="h3" sx={{ fontFamily: 'Roboto, sans-serif', fontWeight: 700, marginBottom: '2rem' }}>
-          Alumni & Last Known Positions
+          Alumni
         </Typography>
         <Typography variant="h4" sx={{ fontFamily: 'Roboto, sans-serif', fontWeight: 350,  marginBottom: '1rem' }}>
           Post-doctoral
