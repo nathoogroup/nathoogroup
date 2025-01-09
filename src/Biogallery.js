@@ -104,49 +104,87 @@ This work, at the intersection of statistics, machine learning, and oncology, se
   },
 
 ];
+
+const postdoc = [
+  {
+    name: "Li Xing",
+    rt: 'Regression for Longitudinal Analysis in Imaging Genetics with Bayesian Shrinkage Priors (2019)',
+    currentPosition: `Assistant Professor, University of Saskatchewan`
+  },
+  {
+    name: "Cedric Beulac (Co-supervised with Jiguo Cao and Faisal Beg)",
+    rt: 'Genetic Correlates of Alzheimers Disease Subtypes (2022)',
+    currentPosition: `Assistant Professor, Universite du Quebec a Montreal
+`
+  },
+
+]
+
+const phdalumni = [
+  {
+    name: "Angus Argyle",
+    rt: 'Species Richness Estimation (2012)',
+    currentPosition: `Statistician, Statistics
+Canada, Ottawa`
+  },
+  {
+    name: "Ming Teng (Co-supervised with Timothy Johnson)",
+    rt: 'Bayesian Computation for Spatial Data and Neuroimaging Data (2017)',
+    currentPosition: `Statistician, Morgan
+Stanley, New York`
+  },
+  {
+    name: "Yin Song",
+    rt: 'Statistical Methods for Neuroimaging Data Analysis and Cognitive Science (2019)',
+    currentPosition: `Data Scientist, Tutela`
+  },
+  {
+    name: "Eugene Opoku (Co-supervised with Ejaz Ahmed)",
+    rt: 'Methods for Imaging Data and Imaging Genetics (2021)',
+    currentPosition: `Methodologist, Statistics Canada`
+  }
+  
+]
+
+
 const mastersalumni = [
   {
     name: "Hong Li",
-    rt: 'Spatio-temporal modeling of fire frequency and severity from panel data',
+    rt: 'Spatio-temporal modeling of fire frequency and severity from panel data (2008)',
     currentPosition: `Statistician, Health
 Canada`
   },
   {
     name: "Parminder Sarohia",
-    rt: 'A study of desperation in sport.',
-    currentPosition: `Actuarial Position,
-Mercer, Vancouver`
+    rt: 'A study of desperation in sport (2010)',
+    currentPosition: `Actuarial Position, Mercer, Vancouver`
   },
   {
     name: "Salimah Ismail",
-    rt: 'Mixed model and space-varying regression analysis of MEG brain signals.',
-    currentPosition: `TV Production
-Masters Candidate, Boston
-University, College of
-Communication`
+    rt: 'Mixed model and space-varying regression analysis of MEG brain signals (2012)',
   },
   {
     name: "Susan Kinniburgh",
-    rt: 'Spatial and Network models for the spread of raccoon rabies.',
+    rt: 'Spatial and Network models for the spread of disease (2012)',
     currentPosition: `Regular Faculty
 Member, Mathematics and
 Statistics, Camosun
 College `
   },
   {
-    name: "Veronica Sabelnykova",
-    rt: 'Bayesian Methods for Joint Modeling of Survival and Longitudinal Data: Applications and Computing',
+    name: "Veronica Sabelnykova (Co-supervised with Mary Lesperance)",
+    rt: 'Bayesian Methods for Joint Modeling of Survival and Longitudinal Data: Applications and Computing (2012)',
     currentPosition: `Statistician, Ontario
 Institute for Cancer
 Research`
   },
   {
-    name: "Priya Grewal",
-    rt: 'Spatial smoothing and ecological regression analysis of low birth weight in British Columbia',
+    name: "Priya Grewal (Co-supervised with Mary Lesperance)",
+    rt: 'Spatial smoothing and ecological regression analysis of low birth weight in British Columbia (2012)',
   },
   {
-    name: "Keelin Greenlaw",
-    rt: 'Bayesian methods for imaging genomics.',
+    name: "Keelin Greenlaw (Co-supervised with Mary Lesperance)",
+    rt: 'Bayesian group-sparse multi-task regression for imaging genomics (2015)',
     currentPosition: `Statistician, Lady
 Davis Institute for Medical
 Research, Montreal`
@@ -156,25 +194,22 @@ Research, Montreal`
     currentPosition: 'Statistical Consultant,UVic Statistical Consulting Centre',
     rt: `Persistent homology for MEG/EEG
 classification with application to brain
-decoding.`
+decoding (2015)`
   },
   {
     name: "Nancy Guo",
-    rt: `Spatial smoothing and ecological regression analysis of low birth weight in British Columbia`,
+    rt: `Spatial Analysis of the Tumor Microenvirnment	(2021)`,
     currentPosition: `Senior Data Scientist
 at NielsenIQ, Shanghai`
   },
   {
     name: "Ziyi Lyu",
-    rt: `Relating Bayes factors and highest
-density intervals for regression
-coefficients in generalized linear
-models`
+    rt: `Investigating the relationship between Bayes factors and highest density intervals (2023)`
   },
   {
     name: "Farbod Esmaeili",
     rt: `Functional Principal Components and
-MGARCH for financial modelling`,
+MGARCH for financial modelling (2024)`,
     currentPosition: `Data Analyst,
 Nicholson Manufacturing
 Inc.`
@@ -182,44 +217,14 @@ Inc.`
   
 ]
 
-const phdalumni = [
-  {
-    name: "Angus Argyle",
-    rt: 'Species Richness Estimation',
-    currentPosition: `Statistician, Statistics
-Canada, Ottawa`
-  },
-  {
-    name: "Ming Teng ",
-    rt: 'A study of desperation in sport.',
-    currentPosition: `Statistician, Morgan
-Stanley, New York`
-  },
-  {
-    name: "Yin Song",
-    rt: 'Mixed model and space-varying regression analysis of MEG brain signals.',
-    currentPosition: `TV Production
-Masters Candidate, Boston
-University, College of
-Communication`
-  },
-  {
-    name: "Eugene Opoku",
-    rt: 'Mixed model and space-varying regression analysis of MEG brain signals.',
-    currentPosition: `TV Production
-Masters Candidate, Boston
-University, College of
-Communication`
-  }
-  
-]
+
 
 const undergradalumni = [
   {
-    name: "Robyn Bates",
+    name: "Robyn Bates (Co-supervised with Bill Reed)",
     rt: `An exploration of Bayesian
 methods for the generalized
-normal-Laplace distribution`,
+normal-Laplace distribution (2006)`,
 
     currentPosition: `PhD student, University of
 Utah, Salt Lake City`
@@ -228,14 +233,12 @@ Utah, Salt Lake City`
     name: "Philip Rempel",
     rt: `Exploring model misspecification
 and robustness in joint models for
-longitudinal and survival data`,
-    currentPosition: `Graduate Student, McGill
-University`
+longitudinal and survival data (2007)`,
   },
   {
     name: "Eric Cormier",
     rt: `Exploring Markov models for
-longitudinal binary data`,
+longitudinal binary data (2009)`,
     currentPosition: `Assistant Teaching
 Professor, Mathematics and
 Statistics, UVic`
@@ -244,31 +247,36 @@ Statistics, UVic`
     name: "Elena Szefer",
     rt: `Statistical Approaches for
 Combining Group Analysis and
-Registration of MR Images`,    
+Registration of MR Images (2012)`,    
 currentPosition: `Biostatistician, The EMMES
 Corporation`
   },
   {
-    name: "Robin Spilette",
+    name: "Robin Spilette (Co-supervised with Naznin Virji-Babul)",
     rt: `Graph Theoretic Analysis of EEG
-Data`,    
+Data (2014)`,    
 currentPosition: `Law Student, University of
 Toronto`
   },
   {
-    name: "Robyn Kilshaw",
+    name: "Robyn Kilshaw (Co-supervised with Mike Masson)",
     rt: `Bayesian Within-Subject Credible
 Intervals for Repeated Measures
-Designs`,
-    currentPosition: `PhD student, University of
+Designs (2018)`,
+    currentPosition: `PhD Student, University of
 Utah, Salt Lake City`
   },
   {
-    name: "Cole Sibbald",
+    name: "Cole Sibbald (Co-supervised with Nishant Mehta)",
     rt: `Differential Privacy Techniques in
-Stacked Generalization`,
+Stacked Generalization (2020)`,
     currentPosition: `Data Engineer, GoDaddy`
   },
+  {
+    name: "Kush Manek (Co-supervised with Michelle Miranda)",
+    rt: `Analysis of mobile EEG data and mild cognitive impairment (2023)`,
+  },
+
 
 ];
 
@@ -370,6 +378,23 @@ function BioGallery() {
         <Typography variant="h3" sx={{ fontFamily: 'Roboto, sans-serif', fontWeight: 700, marginBottom: '2rem' }}>
           Alumni & Last Known Positions
         </Typography>
+        <Typography variant="h4" sx={{ fontFamily: 'Roboto, sans-serif', fontWeight: 350,  marginBottom: '1rem' }}>
+          Post-doctoral
+        </Typography>
+        {postdoc.map((alum, index) => (
+          <Box key={index} sx={{ marginBottom: '1rem' }}>
+            <Typography variant="body1" sx={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
+              {alum.name}
+            </Typography>
+            <Typography variant="body2" sx={{ fontFamily: 'Roboto, sans-serif', fontStyle: 'italic', color: '#555' }}>
+              Research Topic: {alum.rt}
+            </Typography>
+            <Typography variant="body2" sx={{ fontFamily: 'Roboto, sans-serif', color: '#555' }}>
+              Position: {alum.currentPosition}
+            </Typography>
+
+          </Box>
+        ))}
         <Typography variant="h4" sx={{ fontFamily: 'Roboto, sans-serif', fontWeight: 350,  marginBottom: '1rem' }}>
           Doctoral
         </Typography>

@@ -40,7 +40,6 @@ function Slideshow() {
     <div
       style={{
         width: '100vw',
-        height: '80vh',
         overflowX: 'scroll',
         whiteSpace: 'nowrap',
         display: 'flex',
@@ -55,7 +54,7 @@ function Slideshow() {
           alt="Scrollable"
           style={{
             display: 'block',
-            width: '3000px',
+            width: '100%',
             height: 'auto',
           }}
         />
@@ -348,7 +347,12 @@ function Footer() {
     <Box sx={{ backgroundColor: '#000000', color: '#fff', padding: '2rem 0', marginTop: 'auto' }}>
       <Container>
         <Typography variant="body1" align="center" sx={{ fontFamily: 'Roboto, sans-serif', fontWeight: 400 }}>
-          Department of Mathematics and Statistics, University of Victoria
+        <ExternalLink href="https://www.uvic.ca/science/math-statistics/index.php"> 
+          Department of Mathematics and Statistics, 
+          </ExternalLink> 
+          <ExternalLink href="https://www.uvic.ca/">
+          University of Victoria
+          </ExternalLink>
         </Typography>
         <Typography variant="body2" align="center" sx={{ fontFamily: 'Roboto, sans-serif', color: '#ccc' }}>
           David Turpin Building A418 | nathoo at uvic dot ca
