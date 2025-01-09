@@ -90,7 +90,7 @@ function PISection() {
         </Grid>
         <Grid item xs={12} md={6}>
           <Typography variant="h6" sx={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
-Dr.Farouk Nathoo, PhD          </Typography>
+Dr. Farouk Nathoo, PhD          </Typography>
           <Typography variant="body1" sx={{ fontFamily: 'Roboto, sans-serif', color: '#555', lineHeight: 1.6, marginBottom: '1rem' }}>
           Dr. Nathoo is a Professor (Canada Research Chair Tier 2, 2013 - 2023) in the Department of Mathematics and Statistics at the University of Victoria. His research interests have emphasis on biostatistics and Bayesian methods broadly with specific emphasis on the analysis of spatial, temporal and spatiotemporal data. His teaching interests have emphasis on interdisciplinary training of graduate students, Bayesian statistics and data analysis.
           </Typography>
@@ -341,6 +341,34 @@ function Header() {
   );
 }
 
+const TwitterTimeline = () => {
+  useEffect(() => {
+    // Dynamically load the Twitter widget script
+    const script = document.createElement("script");
+    script.src = "https://platform.twitter.com/widgets.js";
+    script.async = true;
+    script.charset = "utf-8";
+    document.body.appendChild(script);
+
+    return () => {
+      // Clean up the script if needed
+      document.body.removeChild(script);
+    };
+  }, []);
+
+  return (
+    <div
+      dangerouslySetInnerHTML={{
+        __html: `
+          <a class="twitter-timeline" href="https://twitter.com/NathooLab?ref_src=twsrc%5Etfw">
+            Tweets by NathooLab
+          </a>
+        `,
+      }}
+    />
+  );
+};
+
 
 function Footer() {
   return (
@@ -384,6 +412,7 @@ function LandingPage() {
                   <ResearchInterests />
                   <OrganizationLogos/>
                   <Divider />
+                  <TwitterTimeline/>
                 </>
               } 
             />
