@@ -9,6 +9,8 @@ import DescriptionIcon from '@mui/icons-material/Description'; // For CV
 import MenuIcon from '@mui/icons-material/Menu';
 //import group from './nathoo.jpeg'
 import logo from './logo.png'
+import cvFile from './nathoo_CV_TD_web.pdf'; // Import the PDF file
+
 //import up from './up.jpg'
 import spat from './spat.png'
 import fn from './nathoo.jpg'
@@ -101,7 +103,7 @@ Dr. Farouk Nathoo, PhD          </Typography>
               variant="contained"
               startIcon={<DescriptionIcon />}
               component={ExternalLink}
-              href="https://web.uvic.ca/~nathoo/nathoo_CV_TD.pdf" // Replace with actual CV link
+              href={cvFile} // Use the imported file as the href
               target="_blank"
               rel="noopener"
               sx={{ backgroundColor: '#2a3e4c', color: '#fff' }}
@@ -360,8 +362,8 @@ const TwitterTimeline = () => {
     <div
       dangerouslySetInnerHTML={{
         __html: `
-          <a class="twitter-timeline" href="https://twitter.com/NathooLab?ref_src=twsrc%5Etfw">
-            Tweets by NathooLab
+          <a class="twitter-timeline" href="https://twitter.com/NathooLab">
+            Posts by NathooLab
           </a>
         `,
       }}
