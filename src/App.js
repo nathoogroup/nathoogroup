@@ -1,7 +1,7 @@
 // LandingPage.js
 import React, { useEffect, useRef, useState} from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import { AppBar, Toolbar, IconButton, Stack, Typography, Grid, Avatar,  Button, Box, Container, Divider,Drawer, List, ListItem, ListItemButton, ListItemText } from '@mui/material';
+import { AppBar, Toolbar, IconButton, Typography, Grid, Avatar,  Button, Box, Container, Divider,Drawer, List, ListItem, ListItemButton, ListItemText } from '@mui/material';
 import { Link as ExternalLink } from '@mui/material';
 //import TwitterIcon from '@mui/icons-material/Twitter';
 import DescriptionIcon from '@mui/icons-material/Description'; // For CV
@@ -10,7 +10,9 @@ import MenuIcon from '@mui/icons-material/Menu';
 //import group from './nathoo.jpeg'
 import logo from './logo.png'
 import cvFile from './nathoo_CV_TD_web.pdf'; // Import the PDF file
-
+import { MasonryPhotoAlbum } from "react-photo-album";
+import "react-photo-album/masonry.css";
+import photos from './photos'
 //import up from './up.jpg'
 import spat from './spat.png'
 import fn from './nathoo.jpg'
@@ -19,7 +21,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import BioGallery from './Biogallery';
 import SoftwarePage from './SoftwarePage';
-import nathoo from './nathoo.jpeg'
+import group from './group.jpg';
 import Pubpage from './Pubpage'
 import bayes from './bayes.png'
 import high from './high.jpg'
@@ -52,7 +54,7 @@ function Slideshow() {
       <ScrollLink to="scrollable" smooth>
         <img
           id="scrollable"
-          src={nathoo}
+          src={group}
           alt="Scrollable"
           style={{
             display: 'block',
@@ -92,14 +94,7 @@ function PISection() {
         </Grid>
         <Grid item xs={12} md={6}>
           <Typography variant="h6" sx={{ fontFamily: 'Roboto, sans-serif', fontWeight: 600 }}>
-Dr. Farouk Nathoo, PhD          </Typography>
-          <Typography variant="body1" sx={{ fontFamily: 'Roboto, sans-serif', color: '#555', lineHeight: 1.6, marginBottom: '1rem' }}>
-          Dr. Nathoo is a Professor (Canada Research Chair Tier 2, 2013 - 2023) in the Department of Mathematics and Statistics at the University of Victoria. His research interests have emphasis on biostatistics and Bayesian methods broadly with specific emphasis on the analysis of spatial, temporal and spatiotemporal data. His teaching interests have emphasis on interdisciplinary training of graduate students, Bayesian statistics and data analysis.
-          </Typography>
-          
-          {/* Links Section */}
-          <Stack direction="row" spacing={2} justifyContent="center">
-            <Button
+Dr. Farouk Nathoo, PhD                  <Button
               variant="contained"
               startIcon={<DescriptionIcon />}
               component={ExternalLink}
@@ -109,8 +104,10 @@ Dr. Farouk Nathoo, PhD          </Typography>
               sx={{ backgroundColor: '#2a3e4c', color: '#fff' }}
             >
               CV
-            </Button>
-          </Stack>
+            </Button>    </Typography>
+          <Typography variant="body1" sx={{ fontFamily: 'Roboto, sans-serif', color: '#555', lineHeight: 1.6, marginBottom: '1rem' }}>
+          Dr. Nathoo is a Professor (Canada Research Chair Tier 2, 2013 - 2023) in the Department of Mathematics and Statistics at the University of Victoria. His research interests have emphasis on biostatistics and Bayesian methods broadly with specific emphasis on the analysis of spatial, temporal and spatiotemporal data. His teaching interests have emphasis on interdisciplinary training of graduate students, Bayesian statistics and data analysis.
+          </Typography>
 
         </Grid>
         <iframe width="60%" height="500px" src="https://www.youtube.com/embed/FqXnwRdOop4?si=VD3AlDYcRuSluEPt&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen aut></iframe>
@@ -412,6 +409,8 @@ function LandingPage() {
                   <Slideshow />
                   <PISection />
                   <ResearchInterests />
+                  <MasonryPhotoAlbum photos={photos}   columns={3} // fewer columns = bigger photos
+                  />
                   <OrganizationLogos/>
                   <Divider />
                   <TwitterTimeline/>
