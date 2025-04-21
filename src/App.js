@@ -341,28 +341,12 @@ function Header() {
 }
 
 const TwitterTimeline = () => {
-  useEffect(() => {
-    // Dynamically load the Twitter widget script
-    const script = document.createElement("script");
-    script.src = "https://platform.twitter.com/widgets.js";
-    script.async = true;
-    script.charset = "utf-8";
-    document.body.appendChild(script);
-
-    return () => {
-      // Clean up the script if needed
-      document.body.removeChild(script);
-    };
-  }, []);
 
   return (
     <div
       dangerouslySetInnerHTML={{
         __html: `
-          <a class="twitter-timeline" href="https://twitter.com/NathooLab">
-            Posts by NathooLab
-          </a>
-        `,
+<iframe src="https://www.juicer.io/api/feeds/nathoolab/iframe" frameborder="0" width="100%" height="1000" style="display:block;margin:0 auto;"></iframe>`,
       }}
     />
   );
