@@ -31,7 +31,7 @@ const teamMembers = [
   {
     name: "Zhengxiao Wei",
     title: "Research Associate",
-    researchInterest: "Zhengxiao Wei is a research associate with a strong focus on Bayesian methods, Markov chain Monte Carlo, and statistical modeling. His current work centers on Bayesian estimation techniques for within-subject designs, aiming to enhance methods for capturing individual variability and improving inference in repeated-measures studies. Looking ahead, Zhengxiao plans to delve into modeling spatial correlations within spatial transcriptomics data, further expanding his expertise in statistical analysis.",
+    researchInterest: "Zhengxiao Wei works as a research associate specializing in Bayesian methods, along with Markov chain Monte Carlo and statistical modeling. The main focus of his research is developing the Bayes factor approach to capture individual variability and improve inference for repeated-measures designs. Zhengxiao routinely uses mixed-effects models and generalized additive models for the ongoing ‘Intermittent Fasting Oncology Studies’ project at BC Cancer Agency. Zhengxiao also aims to analyze spatial correlations in spatial transcriptomics data as part of his upcoming research.",
     image: zw,
     education: "MSc in Statistics, University of Victoria",
   },
