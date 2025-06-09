@@ -5,6 +5,7 @@ import elklake from './images/Elk_Beaver Lake Regional Park_2021Oct10.jpg';
 import elklake2 from './images/elklake.jpeg';
 import mnw from './images/massonnathoowei.jpg';
 import sooke from './images/sooke.jpg';
+import hiking from './images/hiking.png';
 
 const rawImages = [
   { src: birth, alt: 'Birthday' },
@@ -14,6 +15,7 @@ const rawImages = [
   { src: elklake2, alt: 'Elk Lake 2' },
   { src: mnw, alt: 'Masson Nathoo Wei' },
   { src: sooke, alt: 'Sooke' },
+  { src: hiking, alt: 'Hiking' },
 ];
 
 const photos = await Promise.all(
