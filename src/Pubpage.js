@@ -37,6 +37,38 @@ const PaperSummary = ({ paper }) => {
 const Pubpage = () => {
     const allPapers = [
         {
+            title: "Evaluating the Bayes factor under model misspecification",
+            authors: "Zhengxiao Wei, Farouk S. Nathoo, Michael E. J. Masson",
+            journal: "Submitted for publication",
+            year: "2025",
+            doi: "",
+            url: ""
+        },
+        {
+            title: "A-LAVA: Germline genetic contribution to metabolic pathways in cancer. Submitted for Publication",
+            authors: "Mansoureh Jalilkhany , Kiana Gallagher, Isabella Wehner, Phineas T. Hamilton, Sarah McPherson, Sarah McPhedran, Farouk Nathoo, Julian Lum, Ibrahim Numanagić",
+            journal: "Submitted for publication",
+            year: "2025",
+            doi: "",
+            url: ""
+        },
+        {
+            title: "Prognostically favorable immune responses to ovarian cancer are distinguished by self-reactive intra-epithelial plasma cells",
+            authors: "Allyson Claire Banville; Céline Marie Laumont; Karanvir Singh; Breeze Gladwin; Jaden Dedora; Liam Mitchell; Jen Wang; Alex Miranda; Bridget Mateyko; Elizabeth Chavez; Gian Luca Negri; Se Wing Grace Cheng; Julian Smazynski; Katy Milne; Kylee Wright; Malia Lampard; Nicole Gierc; Phineas T Hamilton; Sandra E Spencer; Shreena Kalaria*; Talen Oostenbroek; Victor Negrea Puskas; Christian Steidl; Gregg B Morin; Farouk S. Nathoo; Brad H Nelson",
+            journal: "Submitted for publication",
+            year: "2025",
+            doi: "",
+            url: ""
+        },
+        {
+            title: "Editorial: Emerging trends in large-scale data analysis for neuroscience research",
+            authors: "Nathoo FS, Krigolson OE, and Wang F",
+            journal: "Submitted for publication",
+            year: "2024",
+            doi: "10.3389/fninf.2024.1538787",
+            url: "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1538787/full"
+        },
+        {
             title: "POI-SIMEX for Conditionally Poisson Distributed Biomarkers from Tissue Histology",
             authors: "Yang, A., Hamilton P.T., Nelson, B. H., Lum, J.J., Lesperance, M., Nathoo, F.S.",
             journal: "Submitted for publication",
@@ -462,8 +494,8 @@ const Pubpage = () => {
         }
     ];
 
-    const [selectedYear, setSelectedYear] = useState("2024");
-    const availableYears = Array.from({ length: 25 }, (_, i) => 2024 - i);
+    const [selectedYear, setSelectedYear] = useState("2025");
+    const availableYears = Array.from({ length: 25 }, (_, i) => 2025 - i);
 
     const papers = allPapers.filter(paper => paper.year === selectedYear);
 
