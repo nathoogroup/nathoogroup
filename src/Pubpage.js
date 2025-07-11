@@ -63,7 +63,7 @@ const Pubpage = () => {
         {
             title: "Editorial: Emerging trends in large-scale data analysis for neuroscience research",
             authors: "Nathoo FS, Krigolson OE, and Wang F",
-            journal: "Submitted for publication",
+            journal: "Frontiers in Neuroinformatics",
             year: "2024",
             doi: "10.3389/fninf.2024.1538787",
             url: "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2024.1538787/full"
